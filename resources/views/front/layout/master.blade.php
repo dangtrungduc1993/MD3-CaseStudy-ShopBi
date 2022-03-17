@@ -2,7 +2,7 @@
 <html lang="vi">
 
 <head>
-    <title>@yield('title') | LuStore</title>
+<title>@yield('title') | ShopBi</title>
     <meta name="description"
           content="Mua sách online hay, giá tốt nhất, combo sách hot bán chạy, giảm giá cực khủng cùng với những ưu đãi như miễn phí giao hàng, quà tặng miễn phí, đổi trả nhanh chóng. Đa dạng sản phẩm, đáp ứng mọi nhu cầu.">
     <meta name="keywords" content="nhà sách online, mua sách hay, sách hot, sách bán chạy, sách giảm giá nhiều">
@@ -17,25 +17,25 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="front/css/home.css">
-    <script type="text/javascript" src="front/js/main.js"></script>
-    <link rel="stylesheet" href="front/fontawesome_free_5.13.0/css/all.css">
+    <link rel="stylesheet" href="css/home.css">
+    <script type="text/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" href="fontawesome_free_5.13.0/css/all.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
           rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="front/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="front/slick/slick-theme.css" />
-    <script type="text/javascript" src="front/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript"
             src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
     <link rel="canonical" href="http://dealbook.xyz/">
     <meta name="google-site-verification" content="urDZLDaX8wQZ_-x8ztGIyHqwUQh2KRHvH9FhfoGtiEw" />
-    <link rel="apple-touch-icon" sizes="180x180" href="front/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="front/image/png" sizes="32x32" href="front/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="front/image/png" sizes="16x16" href="front/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="front/favicon_io/site.webmanifest">
-    <style>img[alt="front/www.000webhost.com"]{display: none;}</style>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <style>img[alt="www.000webhost.com"]{display: none;}</style>
 </head>
 
 <body>
@@ -48,7 +48,7 @@
 <nav class="navbar navbar-expand-md bg-white navbar-light">
     <div class="container">
         <!-- logo  -->
-        <a class="navbar-brand" href="index.blade.php" style="color: #CF111A;"><b>DealBook</b>.xyz</a>
+        <a class="navbar-brand" href="index.blade.php" style="color: #CF111A;"><b>ShopBi</b>.vn</a><br/>
 
         <!-- navbar-toggler  -->
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
@@ -60,7 +60,7 @@
             <form class="form-inline ml-auto my-2 my-lg-0 mr-3">
                 <div class="input-group" style="width: 520px;">
                     <input type="text" class="form-control" aria-label="Small"
-                           placeholder="Nhập sách cần tìm kiếm...">
+                           placeholder="Nhập sản phẩm cần tìm kiếm...">
                     <div class="input-group-append">
                         <button type="button" class="btn" style="background-color: #CF111A; color: white;">
                             <i class="fa fa-search"></i>
@@ -185,7 +185,7 @@
                                required autofocus>
                     </div>
 
-                    <div class="form-label-group">
+                <div class="form-label-group">
                         <input type="password" class="form-control" placeholder="Mật khẩu" name="password" required>
                     </div>
 
@@ -217,7 +217,7 @@
                 <div class="categoryheader">
                     <div class="noidungheader text-white">
                         <i class="fa fa-bars"></i>
-                        <span class="text-uppercase font-weight-bold ml-1">Danh mục sách</span>
+                        <span class="text-uppercase font-weight-bold ml-1">DANH MỤC SẢN PHẨM</span>
                     </div>
                 </div>
             </div>
@@ -244,13 +244,62 @@
 
 
 <!-- footer  -->
+</section>
+
+<!-- thanh cac dich vu :mien phi giao hang, qua tang mien phi ........ -->
+<section class="abovefooter text-white" style="background-color: #CF111A;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="dichvu d-flex align-items-center">
+                    <img src="images/icon-books.png" alt="icon-books">
+                    <div class="noidung">
+                        <h3 class="tieude font-weight-bold">HƠN 10.000 SẢN PHẨM HOT</h3>
+                        <p class="detail">Tuyển chọn bởi ShopBi</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="dichvu d-flex align-items-center">
+                    <img src="images/icon-ship.png" alt="icon-ship">
+                    <div class="noidung">
+                        <h3 class="tieude font-weight-bold">MIỄN PHÍ GIAO HÀNG</h3>
+                        <p class="detail">Từ 150.000đ ở Hà Nội</p>
+                        <p class="detail">Từ 300.000đ ở tỉnh thành khác</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="dichvu d-flex align-items-center">
+                    <img src="images/icon-gift.png" alt="icon-gift">
+                    <div class="noidung">
+                        <h3 class="tieude font-weight-bold">QUÀ TẶNG MIỄN PHÍ</h3>
+                        <p class="detail">Tặng Bookmark</p>
+                        <p class="detail">Bao sách miễn phí</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="dichvu d-flex align-items-center">
+                    <img src="images/icon-return.png" alt="icon-return">
+                    <div class="noidung">
+                        <h3 class="tieude font-weight-bold">ĐỔI TRẢ NHANH CHÓNG</h3>
+                        <p class="detail">Hàng bị lỗi được đổi trả nhanh chóng</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <footer>
     <div class="container py-4">
         <div class="row">
             <div class="col-md-3 col-xs-6">
                 <div class="gioithieu">
-                    <h3 class="header text-uppercase font-weight-bold">Về DealBook</h3>
-                    <a href="#">Giới thiệu về DealBook</a>
+                    <h3 class="header text-uppercase font-weight-bold">Về ShopBi</h3>
+                    <a href="#">Giới thiệu về ShopBi</a>
                     <a href="#">Tuyển dụng</a>
                     <div class="fb-like" data-href="https://www.facebook.com/DealBook-110745443947730/"
                          data-width="300px" data-layout="button" data-action="like" data-size="small"
@@ -269,18 +318,18 @@
             <div class="col-md-3 col-xs-6">
                 <div class="lienket">
                     <h3 class="header text-uppercase font-weight-bold">HỢP TÁC VÀ LIÊN KẾT</h3>
-                    <img src="front/images/dang-ky-bo-cong-thuong.png" alt="dang-ky-bo-cong-thuong">
+                    <img src="images/dang-ky-bo-cong-thuong.png" alt="dang-ky-bo-cong-thuong">
                 </div>
             </div>
             <div class="col-md-3 col-xs-6">
                 <div class="ptthanhtoan">
                     <h3 class="header text-uppercase font-weight-bold">Phương thức thanh toán</h3>
-                    <img src="front/images/visa-payment.jpg" alt="visa-payment">
-                    <img src="front/images/master-card-payment.jpg" alt="master-card-payment">
-                    <img src="front/images/jcb-payment.jpg" alt="jcb-payment">
-                    <img src="front/images/atm-payment.jpg" alt="atm-payment">
-                    <img src="front/images/cod-payment.jpg" alt="cod-payment">
-                    <img src="front/images/payoo-payment.jpg" alt="payoo-payment">
+                    <img src="images/visa-payment.jpg" alt="visa-payment">
+                    <img src="images/master-card-payment.jpg" alt="master-card-payment">
+                    <img src="images/jcb-payment.jpg" alt="jcb-payment">
+                    <img src="images/atm-payment.jpg" alt="atm-payment">
+                    <img src="images/cod-payment.jpg" alt="cod-payment">
+                    <img src="images/payoo-payment.jpg" alt="payoo-payment">
                 </div>
             </div>
         </div>
