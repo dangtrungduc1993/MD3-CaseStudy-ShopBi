@@ -1,4 +1,4 @@
-@extends('front.layout.master')
+@extends('frontend.layout.master')
 
 
 @section('title','Home')

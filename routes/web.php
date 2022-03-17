@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ProductController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,10 +16,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('front.index');
+    return view('frontend.index');
 });
 
-Route::get('master',function (){
-   return view('front.layout.master');
-});
+// Route::get('master',function (){
+//    return view('frontend.layout.master');
+// });
 
+
+Route::prefix('product')->group(function(){
+Route::get('list',[ProductController::class,'index'])->name('product.list');
+Route::get('create',[ProductController::class,'create'])->name('product.showFormCreate');
+Route::post('create',[ProductController::class,'store'])->name('product.create');
+Route::get('{id}/update',[ProductController::class,'edit'])->name('product.showFormUpdate');
+Route::post('{id}/update',[ProductController::class,'update'])->name('product.update');
+Route::get('{id}/detail',[ProductController::class,'show'])->name('product.detail');
+Route::get('{id}/delete',[ProductController::class,'destroy'])->name('product.delete');
+});
