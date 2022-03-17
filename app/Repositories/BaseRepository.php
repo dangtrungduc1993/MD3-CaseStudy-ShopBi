@@ -11,6 +11,7 @@ abstract class BaseRepository implements BaseInterface {
     {
         $this->table = $this->getTable();
     }
+
     public abstract function getTable();
     public function getAll()
     {

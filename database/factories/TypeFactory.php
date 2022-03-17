@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Type;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class TypeFactory extends Factory
@@ -15,7 +16,8 @@ class TypeFactory extends Factory
     {
         return [
             'name'=>$this->faker->name(),
-            'description'=>$this->faker->text()
+            'description'=>$this->faker->text(),
+            'parent_id'=>Type::where("parent_id","=",0)->inRandomOrder()->first()->id
         ];
     }
 }
