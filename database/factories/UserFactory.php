@@ -24,7 +24,7 @@ class UserFactory extends Factory
             'phone_number'=>$this->faker->phoneNumber(),
             'password' => Hash::make(123123),
             'note'=>$this->faker->text(),
-            'role_id'=>Role::all()->random()->id
+            'role_id'=>3
 
         ];
     }

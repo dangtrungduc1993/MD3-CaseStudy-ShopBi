@@ -16,8 +16,8 @@ class TypeFactory extends Factory
     {
         return [
             'name'=>$this->faker->name(),
-            'description'=>$this->faker->text(),
-            'parent_id'=>Type::where("parent_id","=",0)->inRandomOrder()->first()->id
+            // 'description'=>$this->faker->text(),
+            // 'parent_id'=>Type::where("parent_id","=",0)->inRandomOrder()->first()->id
         ];
     }
 }

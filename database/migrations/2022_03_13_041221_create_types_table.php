@@ -17,7 +17,7 @@ class CreateTypesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('description')->nullable();
-            $table->unsignedBigInteger("parent_id")->default(0);
+            // $table->unsignedBigInteger("parent_id")->default(0);
             $table->timestamps();
         });
     }

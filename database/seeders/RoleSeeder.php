@@ -19,11 +19,11 @@ class RoleSeeder extends Seeder
         $role->save();
 
         $role = new Role();
-        $role->name = 'User';
+        $role->name = 'Shop';
         $role->save();
 
         $role = new Role();
-        $role->name = 'Shop';
+        $role->name = 'User';
         $role->save();
     }
 }

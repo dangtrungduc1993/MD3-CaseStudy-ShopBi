@@ -17,8 +17,8 @@ class TypeRepository extends BaseRepository
     {
         $type = new Type();
         $type->name = $request->name;
-        $type->description = $request->name;
-        $type->parent_id = $request->parent_id;
+        // $type->description = $request->name;
+        // $type->parent_id = $request->parent_id;
         $type->save();
 
     }
@@ -28,8 +28,8 @@ class TypeRepository extends BaseRepository
         $type = Type::find($id);
         $type = new Type();
         $type->name = $request->name;
-        $type->description = $request->name;
-        $type->parent_id = $request->parent_id;
+        // $type->description = $request->name;
+        // $type->parent_id = $request->parent_id;
         $type->save();
     }
 

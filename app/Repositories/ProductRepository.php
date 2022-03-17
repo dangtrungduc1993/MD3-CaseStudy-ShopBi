@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories; 
+namespace App\Repositories;
 
 use App\Models\Product;
 use Illuminate\Support\Facades\DB;
@@ -12,7 +12,7 @@ class ProductRepository extends BaseRepository {
         return 'products';
     }
     public function store($request){
-        $data = $request->only('name','description','price','quantity','shop_id','type_id');
+        $data = $request->only('name','description','price','quantity','type_id','shop_id');
         $fileName = time().'_'.$request->file('img')->getClientOriginalName();
         $path = $request->file('img')->storeAs('images',$fileName,'public');
         $data['image'] = $path;

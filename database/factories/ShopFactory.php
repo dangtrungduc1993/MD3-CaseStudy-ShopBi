@@ -16,7 +16,7 @@ class ShopFactory extends Factory
     public function definition()
     {
         return [
-            'role_id'=>Role::all()->random()->id,
+            'role_id'=>2,
             'name'=>$this->faker->name(),
             'email'=>$this->faker->unique()->safeEmail(),
             'phone_number'=>$this->faker->phoneNumber(),

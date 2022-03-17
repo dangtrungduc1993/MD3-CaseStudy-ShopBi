@@ -1,39 +1,21 @@
-<form action="{{route('product.create')}}" method="POST" enctype="multipart/form-data">
+<form action="{{route('shop.create')}}" method="POST" >
     @csrf
     <div>
-        ProductName:
+        Shop Name:
         <input type="text" name="name">
         <p>{{$errors->has('name')? $errors->first('name'):""}}</p>
     </div>
     <div>
-        ProductDescription:
-        <input type="text" name="description">
-        <p>{{$errors->has('description')? $errors->first('description'):""}}</p>
+        Shop Email:
+        <input type="email" name="email">
+        <p>{{$errors->has('email')? $errors->first('email'):""}}</p>
     </div>
     <div>
-        ProductPrice:
-        <input type="number" name='price'>
-        <p>{{$errors->has('price')? $errors->first('price'):""}}</p>
-    </div>
-    <div>
-        ProductQuantity:
-        <input type="number" name="quantity">
-        <p>{{$errors->has('quantity')? $errors->first('quantity'):""}}</p>
-    </div>
-    <div>
-        SelectProductImage:
-        <input type="file" name="img" >
-        <p>{{$errors->has('img')? $errors->first('img'):""}}</p>
+        Shop Password:
+        <input type="password" name="password">
+        <p>{{$errors->has('password')? $errors->first('password'):""}}</p>
     </div>
 
-    <div>
-        SelectTypeName:
-        <select name="type_id" id="">
-            @foreach($types as $type)
-            <option value="{{$type->id}}">{{$type->name}}</option>
-            @endforeach
-        </select>
-    </div>
     <div>
         <button>CreateProduct</button>
     </div>

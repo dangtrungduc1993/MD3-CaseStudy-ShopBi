@@ -18,26 +18,26 @@ class TypeSeeder extends Seeder
     {
         $type = new Type();
         $type->name = "Do Thoi Trang";
-        $type->description = "Day la quan ao nam";
-        $type->parent_id=0;
+        // $type->description = "Day la quan ao nam";
+        // $type->parent_id=0;
         $type->save();
 
         $type = new Type();
         $type->name = "Do Dien Tu";
-        $type->description = "Day la quan ao nam";
-        $type->parent_id=0;
+        // $type->description = "Day la quan ao nam";
+        // $type->parent_id=0;
         $type->save();
 
         $type = new Type();
         $type->name = "Do Gia Dung";
-        $type->description = "Day la quan ao nam";
-        $type->parent_id=0;
+        // $type->description = "Day la quan ao nam";
+        // $type->parent_id=0;
         $type->save();
 
         $type = new Type();
         $type->name = "Do Nhap Khau";
-        $type->description = "Day la quan ao nam";
-        $type->parent_id=0;
+        // $type->description = "Day la quan ao nam";
+        // $type->parent_id=0;
         $type->save();
         Type::factory(20)->create();
     }

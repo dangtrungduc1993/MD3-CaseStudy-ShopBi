@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TypeRequest;
 use App\Models\Type;
 use App\Repositories\TypeRepository;
 use Illuminate\Http\Request;
@@ -23,11 +24,11 @@ class TypeController extends Controller
     }
     public function create()
     {
-        $categories = $this->categoryRepository->getAll();
-        return view('backend.type.create',compact('categories'));
+        // $categories = $this->categoryRepository->getAll();
+        return view('backend.type.create');
     }
 
-    public function store(Request $request)
+    public function store(TypeRequest $request)
     {
         $this->typeRepository->store($request);
         return redirect()->route('type.index');
@@ -46,7 +47,7 @@ class TypeController extends Controller
 
     }
 
-    public function update(Request $request, $id)
+    public function update(TypeRequest $request, $id)
     {
         $this->typeRepository->update($request,$id);
         return redirect(route('type.index'));
@@ -61,8 +62,8 @@ class TypeController extends Controller
 
     }
 
-    public function getTypeOfParent($id){
-        $types = Type::where('parent_id',$id)->get();
-        return response()->json($types);
-    }
+    // public function getTypeOfParent($id){
+    //     $types = Type::where('parent_id',$id)->get();
+    //     return response()->json($types);
+    // }
 }

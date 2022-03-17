@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ProductRequest;
 use App\Models\Type;
-use App\Repositories\ProductRepository;
 use Illuminate\Http\Request;
+use App\Http\Requests\ProductRequest;
+use App\Http\Requests\ProductsRequest;
+use App\Repositories\ProductRepository;
 use Symfony\Component\VarDumper\Caster\RedisCaster;
 
 class ProductController extends Controller
@@ -30,14 +31,16 @@ class ProductController extends Controller
     {
         // $products = $this->productRepository->getAll();
         $types = Type::where('parent_id',0)->get();
-            return view('backend.product.create',compact('types'));
+
+        return view('backend.product.create',compact('types'));
     }
 
-    
+
 
 
     public function store(ProductRequest $request)
     {
+        // dd($request);
          $this->productRepository->store($request);
         return redirect()->route('product.list');
 

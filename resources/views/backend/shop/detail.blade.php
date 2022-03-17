@@ -1,30 +1,15 @@
 <table border="1">
     <tr>
         <th>Name</th>
-        <td>{{$products->name}}</td>
+        <td>{{$shop->name}}</td>
     </tr>
     <tr>
-        <th>image</th>
-        <td><img src="{{asset('storage/'.$products->image)}}" alt=""></td>
+        <th>Email</th>
+        <td>{{$shop->email}}</td>
     </tr>
     <tr>
-        <th>Description</th>
-        <td>{{$products->description}}</td>
+        <th>Password</th>
+        <td>{{$shop->password}}</td>
     </tr>
-    <tr>
-        <th>Price</th>
-        <td>{{$products->price}}</td>
-    </tr>
-    <tr>
-        <th>Quantity</th>
-        <td>{{$products->quantity}}</td>
-    </tr>
-    <tr>
-        <th>ShopName</th>
-        <td>{{$products->shopname}}</td>
-    </tr>
-    <tr>
-        <th>TypeName</th>
-        <td>{{$products->typename}}</td>
-    </tr>
+
 </table>

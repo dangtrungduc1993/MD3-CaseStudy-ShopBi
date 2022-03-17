@@ -2,84 +2,66 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ShopRequest;
 use App\Models\Shop;
+use App\Repositories\ShopRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class ShopController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public $shopRepository;
+    public function __construct(ShopRepository $shopRepository)
+    {
+        $this->shopRepository = $shopRepository;
+
+
+    }
     public function index()
     {
-        //
+        $shops = $this->shopRepository->getAll();
+        return view('backend.shop.list', compact('shops'));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('backend.shop.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function store(ShopRequest $request)
     {
-        //
+        $this->shopRepository->store($request);
+        return redirect()->route('shop.index');
+    }
+    public function show($id)
+    {
+        $shop = $this->shopRepository->getById($id);
+        return view('backend.shop.detail', compact('shop'));
+
+    }
+    public function edit($id)
+    {
+        $shop = $this->shopRepository->getById($id);
+        return view('backend.shop.update', compact('shop','id'));
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Shop  $shop
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Shop $shop)
+    public function update(ShopRequest $request, $id)
     {
-        //
+        $this->shopRepository->update($request,$id);
+        return redirect(route('shop.index'));
+
+
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Shop  $shop
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Shop $shop)
+    public function destroy($id)
     {
-        //
+        $this->shopRepository->deleteById($id);
+        return redirect(route('shop.index'));
+
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Shop  $shop
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Shop $shop)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Shop  $shop
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Shop $shop)
-    {
-        //
-    }
+    // public function getshopOfParent($id){
+    //     $shops = shop::where('parent_id',$id)->get();
+    //     return response()->json($shops);
+    // }
 }
