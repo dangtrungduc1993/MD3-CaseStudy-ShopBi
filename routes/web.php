@@ -33,3 +33,9 @@ Route::prefix('product')->group(function () {
     Route::get('{id}/detail', [ProductController::class, 'show'])->name('product.detail');
     Route::get('{id}/delete', [ProductController::class, 'destroy'])->name('product.delete');
 });
+Route::get('login',function(){
+    return view('backend.auth.login');
+})->name('login');
+Route::get('register',function(){
+    return view('backend.auth.register');
+})->name('register');

@@ -16,6 +16,7 @@ class TypeSeeder extends Seeder
      */
     public function run()
     {
+
         $type = new Type();
         $type->name = "Do Thoi Trang";
         $type->description = "Day la quan ao nam";
