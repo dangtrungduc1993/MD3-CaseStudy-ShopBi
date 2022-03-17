@@ -16,7 +16,8 @@ class CreateTypesTable extends Migration
         Schema::create('types', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description');
+            $table->string('description')->nullable();
+            $table->unsignedBigInteger("parent_id")->default(0);
             $table->timestamps();
         });
     }

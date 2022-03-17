@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use App\Models\Type;
 use Illuminate\Database\Seeder;
 
+use function PHPSTORM_META\type;
+
 class TypeSeeder extends Seeder
 {
     /**
@@ -14,7 +16,30 @@ class TypeSeeder extends Seeder
      */
     public function run()
     {
-        Type::factory(10)->create();
-        
+
+        $type = new Type();
+        $type->name = "Do Thoi Trang";
+        $type->description = "Day la quan ao nam";
+        $type->parent_id=0;
+        $type->save();
+
+        $type = new Type();
+        $type->name = "Do Dien Tu";
+        $type->description = "Day la quan ao nam";
+        $type->parent_id=0;
+        $type->save();
+
+        $type = new Type();
+        $type->name = "Do Gia Dung";
+        $type->description = "Day la quan ao nam";
+        $type->parent_id=0;
+        $type->save();
+
+        $type = new Type();
+        $type->name = "Do Nhap Khau";
+        $type->description = "Day la quan ao nam";
+        $type->parent_id=0;
+        $type->save();
+        Type::factory(20)->create();
     }
 }
