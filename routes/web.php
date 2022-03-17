@@ -35,6 +35,7 @@ Route::prefix('products')->group(function () {
     Route::get('{id}/detail', [ProductController::class, 'show'])->name('product.detail');
     Route::get('{id}/delete', [ProductController::class, 'destroy'])->name('product.delete');
 });
+<<<<<<< HEAD
 
 
 Route::prefix('shops')->group(function () {
@@ -56,3 +57,11 @@ Route::prefix('types')->group(function () {
     Route::get('{id}/detail', [ShopController::class, 'show'])->name('type.detail');
     Route::get('{id}/delete', [ShopController::class, 'destroy'])->name('type.delete');
 });
+=======
+Route::get('login',function(){
+    return view('backend.auth.login');
+})->name('login');
+Route::get('register',function(){
+    return view('backend.auth.register');
+})->name('register');
+>>>>>>> 2624c74cab8c0f81143d098388a14c2343d9c877
