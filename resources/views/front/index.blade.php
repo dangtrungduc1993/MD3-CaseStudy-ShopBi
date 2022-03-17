@@ -182,11 +182,11 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <a href="#"><img src="images/banner1.jpg" class="img-fluid"
+                                <a href="#"><img src="images/banner10.jpg" class="img-fluid"
                                         style="height: 386px;" width="900px" alt="First slide"></a>
                             </div>
                             <div class="carousel-item">
-                                <a href="#"><img src="images/banner2.jpg" class="img-fluid"
+                                <a href="#"><img src="images/banner1.jpg" class="img-fluid"
                                         style="height: 386px;" width="900px" alt="Second slide"></a>
                             </div>
                             <div class="carousel-item">
@@ -194,7 +194,7 @@
                                         style="height: 386px;"width="900px" alt="Third slide"></a>
                             </div>
                             <div class="carousel-item">
-                                <a href="#"><img src="images/banner4.jpg" class="img-fluid"
+                                <a href="#"><img src="images/banner8.jpg" class="img-fluid"
                                         style="height: 386px;"width="900px" alt="Third slide"></a>
                             </div>
                         </div>

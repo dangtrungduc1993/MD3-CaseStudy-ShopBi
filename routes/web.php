@@ -16,12 +16,12 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('/', function () {
-    return view('frontend.index');
+    return view('front.index');
 });
 
-// Route::get('master',function (){
-//    return view('frontend.layout.master');
-// });
+Route::get('master',function (){
+   return view('front.layout.master');
+});
 
 
 Route::prefix('product')->group(function(){
