@@ -17,7 +17,7 @@
     </div>
 
     <div>
-        <button>CreateProduct</button>
+        <button>Create Shop</button>
     </div>
 </form>
 

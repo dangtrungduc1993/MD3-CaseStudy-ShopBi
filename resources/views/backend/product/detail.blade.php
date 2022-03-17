@@ -5,7 +5,7 @@
     </tr>
     <tr>
         <th>image</th>
-        <td><img src="{{asset('storage/'.$products->image)}}" alt=""></td>
+        <td><img style="width: 100px" src="{{asset('storage/'.$products->image)}}" alt=""></td>
     </tr>
     <tr>
         <th>Description</th>

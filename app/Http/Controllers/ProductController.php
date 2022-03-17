@@ -30,7 +30,8 @@ class ProductController extends Controller
 
     {
         // $products = $this->productRepository->getAll();
-        $types = Type::where('parent_id',0)->get();
+        // $types = Type::where('parent_id',0)->get();
+        $types = Type::all();
 
         return view('backend.product.create',compact('types'));
     }
