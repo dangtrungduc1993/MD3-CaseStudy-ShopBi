@@ -90,7 +90,7 @@
                             <a href="#" class="btn btn-secondary rounded-circle">
                                 <i class="fa fa-user"></i>
                             </a>
-                            <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">{{Auth::user()->name}}</a>
+                            <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">{{Auth::user()->name??"tai khoan"}}</a>
                         </li>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
