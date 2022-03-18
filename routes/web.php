@@ -1,12 +1,15 @@
 <?php
 
+// use App\Http\Controllers\Auth\GoogleSocialiteController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\TypeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\GoogleSocialiteController;
 
 
 /*
@@ -22,13 +25,14 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
     return view('front.index');
-});
+})->name('index');
 
 Route::get('master', function () {
     return view('front.layout.master');
 });
+Route::middleware('CheckAuth')->group(function(){
 
-
+});
 Route::prefix('products')->group(function () {
     Route::get('/', [ProductController::class, 'index'])->name('product.list');
     Route::get('create', [ProductController::class, 'create'])->name('product.showFormCreate');
@@ -38,6 +42,10 @@ Route::prefix('products')->group(function () {
     Route::get('{id}/detail', [ProductController::class, 'show'])->name('product.detail');
     Route::get('{id}/delete', [ProductController::class, 'destroy'])->name('product.delete');
 });
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3d29ddb1f3b55dc6986af9384ea495c5abe807ad
 
 
 Route::prefix('shops')->group(function () {
@@ -81,9 +89,28 @@ Route::prefix('users')->group(function () {
 });
 
 
+<<<<<<< HEAD
+Route::get('register',function(){
+    return view('backend.auth.register');
+})->name('register');
+
+
+Route::get('login',[AuthController::class,'showFormLogin'])->name('auth.formLogin');
+Route::post('login',[AuthController::class,'login'])->name('auth.login');
+Route::get('register',[AuthController::class,'showFormRegister'])->name('auth.formRegister');
+Route::post('register',[AuthController::class,'register'])->name('auth.register')->middleware('CheckRegister');
+
+
+
+Route::get('auth/google', [GoogleSocialiteController::class, 'redirectToGoogle']);
+Route::get('callback/google', [GoogleSocialiteController::class, 'handleCallback']);
+
+
+=======
 Route::get('login',function(){
     return view('backend.auth.login');
 })->name('login');
 Route::get('register',function(){
     return view('backend.auth.register');
 })->name('register');
+>>>>>>> 3d29ddb1f3b55dc6986af9384ea495c5abe807ad
