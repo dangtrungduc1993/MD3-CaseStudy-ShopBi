@@ -53,6 +53,12 @@ class ProductController extends Controller
         $products = $this->productRepository->getById($id);
         return view('backend.product.detail',compact('products'));
     }
+    public function showByTypeId($type_id)
+    {
+        $products = $this->productRepository->getByTypeId($type_id);
+        // dd($products);
+        return view('backend.product.typedetail',compact('products'));
+    }
 
     public function edit($id)
     {

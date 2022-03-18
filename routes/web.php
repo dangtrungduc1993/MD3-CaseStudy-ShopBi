@@ -36,6 +36,7 @@ Route::prefix('products')->group(function () {
     Route::get('{id}/update', [ProductController::class, 'edit'])->name('product.showFormUpdate');
     Route::post('{id}/update', [ProductController::class, 'update'])->name('product.update');
     Route::get('{id}/detail', [ProductController::class, 'show'])->name('product.detail');
+    Route::get('{id}/detailType', [ProductController::class, 'showByTypeId'])->name('product.detailType');
     Route::get('{id}/delete', [ProductController::class, 'destroy'])->name('product.delete');
 });
 

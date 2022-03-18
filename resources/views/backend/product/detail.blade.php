@@ -19,12 +19,9 @@
         <th>Quantity</th>
         <td>{{$products->quantity}}</td>
     </tr>
-    <tr>
-        <th>ShopName</th>
-        <td>{{$products->shopname}}</td>
-    </tr>
+
     <tr>
         <th>TypeName</th>
         <td>{{$products->typename}}</td>
     </tr>
-</table>
+    </table>

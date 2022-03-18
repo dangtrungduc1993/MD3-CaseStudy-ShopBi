@@ -1,4 +1,4 @@
-<a href="{{route('type.showFormCreate')}}">Createtype</a>
+<a href="{{route('type.showFormCreate')}}">Create Type</a>
 <table border="1">
     <thead>
         <tr>

@@ -48,5 +48,19 @@ class ProductRepository extends BaseRepository {
         ->where('products.id',$id)
         ->first();
     }
+    // public function getByTypeId($type_id)
+    // {
+    //     return DB::table($this->table)
+    //     // ->join('shops','products.shop_id','=','shops.id')
+    //     ->join('types','products.type_id','=','types.id')
+    //     ->select('products.*','types.id as typeid','types.name as typename')
+    //     ->where('products.type_id',$type_id)
+    //     ->first();
+    // }
+
+    public function getByTypeId($type_id)
+    {
+        return DB::table($this->table)->where('type_id',$type_id)->get();
+    }
 }
 
