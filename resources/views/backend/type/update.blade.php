@@ -1,20 +1,12 @@
-<form action="{{route('shop.update',$shop->id)}}" method="POST" >
+<form action="{{route('type.update',$type->id)}}" method="POST" >
     @csrf
     <div>
-        Shop Name:
-        <input type="text" name="name" value="{{$shop->name}}">
-    </div>
-    <div>
-        Email:
-        <input type="email" name="email"{{$shop->email}}>
-    </div>
-    <div>
-        Password:
-        <input type="password" name='password' value="{{$shop->password}}">
+        Type Name:
+        <input type="text" name="name" value="{{$type->name}}">
     </div>
 
 
     <div>
-        <button>Updateshop</button>
+        <button>Update type</button>
     </div>
 </form>

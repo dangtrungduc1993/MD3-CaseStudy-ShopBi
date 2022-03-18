@@ -13,7 +13,7 @@ class RegisterRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -26,15 +26,17 @@ class RegisterRequest extends FormRequest
         return [
             'name'=>'required',
             'email'=>'required',
-            'password'=>'required'
+            'password'=>'required',
+            'confirmPassword'=>'required'
         ];
     }
     public function messages()
     {
         return [
-            'name.required'=>"khong duoc de trong ten User",
-            'email.required'=>"Khong duoc de trong email",
-            'password.required'=>'Khong duoc de trong password'
+            'name.required'=>"Không được để trống tên user",
+            'email.required'=>"Không được để trống email",
+            'password.required'=>'Không được để trống password',
+            'confirmPassword.required'=>'Vui lòng xác nhận password'
         ];
     }
 }

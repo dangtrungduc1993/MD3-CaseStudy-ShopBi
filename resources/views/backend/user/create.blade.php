@@ -1,23 +1,23 @@
-<form action="{{route('shop.create')}}" method="POST" >
+<form action="{{route('user.create')}}" method="POST" >
     @csrf
     <div>
-        Shop Name:
+        User Name:
         <input type="text" name="name">
         <p>{{$errors->has('name')? $errors->first('name'):""}}</p>
     </div>
     <div>
-        Shop Email:
+        User Email:
         <input type="email" name="email">
         <p>{{$errors->has('email')? $errors->first('email'):""}}</p>
     </div>
     <div>
-        Shop Password:
+        User Password:
         <input type="password" name="password">
         <p>{{$errors->has('password')? $errors->first('password'):""}}</p>
     </div>
 
     <div>
-        <button>Create Shop</button>
+        <button>Create User</button>
     </div>
 </form>
 

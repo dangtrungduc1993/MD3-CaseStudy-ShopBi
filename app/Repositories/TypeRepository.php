@@ -26,7 +26,7 @@ class TypeRepository extends BaseRepository
     public function update($request,$id)
     {
         $type = Type::find($id);
-        $type = new Type();
+
         $type->name = $request->name;
         // $type->description = $request->name;
         // $type->parent_id = $request->parent_id;

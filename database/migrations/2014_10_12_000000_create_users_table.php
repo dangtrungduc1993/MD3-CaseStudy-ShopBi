@@ -24,6 +24,8 @@ class CreateUsersTable extends Migration
             $table->string('address')->nullable();
             $table->string('phone_number')->nullable();
             $table->string('note')->nullable();
+            $table->string('social_id')->nullable();
+            $table->string('social_type')->nullable();
             $table->timestamps();
         });
     }

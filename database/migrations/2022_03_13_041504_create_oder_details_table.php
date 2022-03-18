@@ -19,8 +19,8 @@ class CreateOderDetailsTable extends Migration
             $table->unsignedBigInteger('product_id');
             $table->integer('quantity');
             $table->double('price');
-            $table->foreign('oder_id')->references('id')->on('oders');
-            $table->foreign('product_id')->references('id')->on('products');
+            $table->foreign('oder_id')->references('id')->on('oders')->onDelete("cascade");
+            $table->foreign('product_id')->references('id')->on('products')->onDelete("cascade");
 
 
 

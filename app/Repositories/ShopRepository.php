@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Models\Shop;
 use http\Env\Request;
+use Illuminate\Support\Facades\Hash;
 
 class ShopRepository extends BaseRepository
 {
@@ -19,7 +20,7 @@ class ShopRepository extends BaseRepository
         $shop->name = $request->name;
         $shop->email = $request->email;
         $shop->role_id = 2;
-        $shop->password = $request->password;
+        $shop->password = Hash::make($request->password);
         $shop->save();
 
     }
@@ -29,7 +30,7 @@ class ShopRepository extends BaseRepository
         $shop = shop::find($id);
         $shop->name = $request->name;
         $shop->email = $request->email;
-        $shop->password = $request->password;
+        $shop->password = Hash::make($request->password);
         $shop->save();
 
 
