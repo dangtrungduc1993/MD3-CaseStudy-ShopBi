@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\TypeController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 
 
@@ -67,6 +68,16 @@ Route::prefix('roles')->group(function () {
     Route::post('{id}/update', [RoleController::class, 'update'])->name('role.update');
     Route::get('{id}/detail', [RoleController::class, 'show'])->name('role.detail');
     Route::get('{id}/delete', [RoleController::class, 'destroy'])->name('role.delete');
+});
+
+Route::prefix('users')->group(function () {
+    Route::get('', [UserController::class, 'index'])->name('user.index');
+    Route::get('create', [UserController::class, 'create'])->name('user.showFormCreate');
+    Route::post('create', [UserController::class, 'store'])->name('user.create');
+    Route::get('{id}/update', [UserController::class, 'edit'])->name('user.showFormUpdate');
+    Route::post('{id}/update', [UserController::class, 'update'])->name('user.update');
+    Route::get('{id}/detail', [UserController::class, 'show'])->name('user.detail');
+    Route::get('{id}/delete', [UserController::class, 'destroy'])->name('user.delete');
 });
 
 

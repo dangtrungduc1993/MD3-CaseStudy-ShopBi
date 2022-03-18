@@ -6,7 +6,7 @@
     </div>
     <div>
         Email:
-        <input type="email" name="email"{{$shop->email}}>
+        <input readonly type="email" name="email" value="{{$shop->email}}">
     </div>
     <div>
         Password:
