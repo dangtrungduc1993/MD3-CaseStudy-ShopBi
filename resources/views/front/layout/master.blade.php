@@ -90,15 +90,14 @@
                             <a href="#" class="btn btn-secondary rounded-circle">
                                 <i class="fa fa-user"></i>
                             </a>
-                            <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">Tài
-                                khoản</a>
+                            <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">{{Auth::user()->name}}</a>
                         </li>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
-                            <a href="{{ route('register') }}" class="btn btn-primary" style="width:100%">Đăng ký</a>
+                            <a href="{{route('auth.formRegister')}}" class="btn btn-primary" style="width:100%">Đăng ký</a>
 
                             <br>
-                            <a href="{{ route('login') }}" class="btn btn-primary mt-3" style="width:100%">Đăng
+                            <a href="{{route('auth.formLogin')}}" class="btn btn-primary mt-3" style="width:100%">Đăng
                                 nhập</a>
 
                         </div>
