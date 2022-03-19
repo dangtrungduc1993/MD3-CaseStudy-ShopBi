@@ -52,10 +52,6 @@ Route::prefix('products')->group(function () {
     Route::get('{id}/detailType', [ProductController::class, 'showByTypeId'])->name('product.detailType');
     Route::get('{id}/delete', [ProductController::class, 'destroy'])->name('product.delete');
 });
-<<<<<<< HEAD
-
-=======
->>>>>>> f78271bf91a72c3dd84f0d86a474f50ddc7a3e4a
 
 
 Route::prefix('shops')->group(function () {
