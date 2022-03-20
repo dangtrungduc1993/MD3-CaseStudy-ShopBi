@@ -42,10 +42,6 @@ Route::prefix('products')->group(function () {
     Route::get('{id}/detail', [ProductController::class, 'show'])->name('product.detail');
     Route::get('{id}/delete', [ProductController::class, 'destroy'])->name('product.delete');
 });
-<<<<<<< HEAD
-
-=======
->>>>>>> 3d29ddb1f3b55dc6986af9384ea495c5abe807ad
 
 
 Route::prefix('shops')->group(function () {
@@ -89,7 +85,6 @@ Route::prefix('users')->group(function () {
 });
 
 
-<<<<<<< HEAD
 Route::get('register',function(){
     return view('backend.auth.register');
 })->name('register');
@@ -106,11 +101,3 @@ Route::get('auth/google', [GoogleSocialiteController::class, 'redirectToGoogle']
 Route::get('callback/google', [GoogleSocialiteController::class, 'handleCallback']);
 
 
-=======
-Route::get('login',function(){
-    return view('backend.auth.login');
-})->name('login');
-Route::get('register',function(){
-    return view('backend.auth.register');
-})->name('register');
->>>>>>> 3d29ddb1f3b55dc6986af9384ea495c5abe807ad
