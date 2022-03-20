@@ -114,7 +114,7 @@
                             style="display:inline-block">Giỏ
                             Hàng</a>
 
-                            @yield('logout')
+                        
 
 
                     </li>

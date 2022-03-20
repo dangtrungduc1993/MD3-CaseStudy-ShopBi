@@ -1,3 +1,5 @@
+@extends('front.layout.master')
+@section('body')
 <a href="{{route('product.showFormCreate')}}">Create Product</a>
 {{-- <a href="{{route('auth.logout')}}">Logout</a> --}}
 <table border="1">
@@ -32,3 +34,4 @@
         @endforeach
     </tbody>
 </table>
+@endsection

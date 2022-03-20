@@ -1,3 +1,5 @@
+@extends('front.layout.master')
+@section('body')
 <table border="1">
     <tr>
         <th>Name</th>
@@ -25,3 +27,4 @@
         <td>{{$products->typename}}</td>
     </tr>
     </table>
+@endsection

@@ -1,3 +1,4 @@
+    
     <!DOCTYPE html>
     <html lang="vi">
 
@@ -415,7 +416,7 @@
         </div>
     </section>
 
-    <!-- giao diện giỏ hàng  -->
+    {{-- <!-- giao diện giỏ hàng  -->
     <section class="content my-3">
         <div class="container">
             <div class="cart-page bg-white">
@@ -734,7 +735,9 @@
         </div>
         <!-- het container  -->
     </section>
-    <!-- het khoi content  -->
+    <!-- het khoi content  --> --}}
+
+
 
 
     <!-- thanh cac dich vu :mien phi giao hang, qua tang mien phi ........ -->

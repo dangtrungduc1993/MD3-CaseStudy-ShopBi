@@ -36,10 +36,14 @@ Route::get('admin', function () {
 Route::get('sachkinhte', function () {
     return view('front.layout.sachkinhte');
 });
+Route::get('giohang', function () {
+    return view('front.layout.giohang');
+});
 
 // Route::prefix('home')->group(function () {
     Route::get('/product', [ProductController::class, 'index'])->name('product.list');
     Route::get('/product/{id}/detail', [ProductController::class, 'show'])->name('product.detail');
+    Route::post('/cart', [ProductController::class, 'cart'])->name('product.cart');
 
     // });
 

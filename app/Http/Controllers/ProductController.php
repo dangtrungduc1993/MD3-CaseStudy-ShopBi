@@ -29,6 +29,10 @@ class ProductController extends Controller
     {
         return view('front.user');
     }
+    public function cart()
+    {
+        return view('backend.product.giohang');
+    }
     public function indexAuth()
     {
         $products = $this->productRepository->getAll();
@@ -53,7 +57,7 @@ class ProductController extends Controller
     {
         // dd($request);
          $this->productRepository->store($request);
-        return redirect()->route('product.listauth');
+        return redirect()->route('backend.product.listauth');
 
     }
 

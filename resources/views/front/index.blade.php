@@ -246,6 +246,35 @@
                             </a>
                         </div>
                     </div>
+
+                    <div class="col-lg col-sm-4">
+                        <img style="width : 130px" src="images/banner1.jpg" alt="">
+                        <a href="" target="_blank">banner1</a>
+                        <form action="{{route('product.cart')}}" method="post">
+                            @csrf
+                            <input type="number" name="soluong" min="1" max="10" value="1">
+                            <input type="submit" name="addcart" value="Dat Hang">
+                            <input type="hidden" name="tensp"  value="Dong Ho">
+                            <input type="hidden" name="gia"  value="10">
+                            <input type="hidden" name="hinh"  value="images/banner1.jpg">
+                        </form>
+                    </div>
+                    <div class="col-lg col-sm-4">
+                        <img style="width : 130px" src="images/banner2.jpg" alt="">
+                        <a href="" target="_blank">banner2</a>
+                        <form action="{{route('product.cart')}}" method="post">
+                            @csrf
+                            <input type="number" name="soluong" min="1" max="10" value="1">
+                            <input type="submit" name="addcart" value="Dat Hang">
+                            <input type="hidden" name="tensp"  value="Ao Khoac">
+                            <input type="hidden" name="gia"  value="30">
+                            <input type="hidden" name="hinh"  value="images/banner2.jpg">
+                        </form>
+                    </div>
+
+
+
+
                     <div class="col-lg col-sm-4">
                         <div class="card">
                             <a href="#" class="motsanpham" style="text-decoration: none; color: black;"

@@ -1,4 +1,5 @@
-
+@extends('front.layout.master')
+@section('body')
 <table border="1">
     <thead>
         <tr>
@@ -17,7 +18,7 @@
         @foreach ($products as $product)
         <tr>
             <td>{{$product->name}}</td>
-            <td><img style="width: 100" src="{{asset('storage/'.$product->image)}}" alt=""></td>
+            <td><img style="width: 100 px" src="{{asset('storage/'.$product->image)}}" alt=""></td>
             <td>{{$product->description}}</td>
             <td>{{$product->price}}</td>
             <td>{{$product->quantity}}</td>
@@ -32,3 +33,4 @@
         @endforeach
     </tbody>
 </table>
+@endsection
