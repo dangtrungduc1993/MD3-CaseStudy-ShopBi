@@ -37,7 +37,7 @@ class GoogleSocialiteController extends Controller
 
                 Auth::login($finduser);
 
-                return redirect()->route('index');
+                return redirect()->route('product.homeauth');
 
             }else{
                 $newUser = User::create([
@@ -51,7 +51,7 @@ class GoogleSocialiteController extends Controller
 
                 Auth::login($newUser);
 
-                return redirect()->route('index');
+                return redirect()->route('product.homeauth');
             }
 
         } catch (Exception $e) {

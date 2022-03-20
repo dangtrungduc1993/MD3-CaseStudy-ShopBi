@@ -90,11 +90,9 @@
                             <a href="#" class="btn btn-secondary rounded-circle">
                                 <i class="fa fa-user"></i>
                             </a>
-<<<<<<< HEAD
-                            <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">{{Auth::user()->name??"tai khoan"}}</a>
-=======
-                            <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">{{Auth::user()->name??"Tài khoản"}}</a>
->>>>>>> f78271bf91a72c3dd84f0d86a474f50ddc7a3e4a
+                            <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">{{Auth::user()->name??"TÀI KHOẢN"}}</a>
+                            {{-- <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">LOGOUT</a> --}}
+                            {{-- <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">{{Auth::user()->name??"Tài khoản"}}</a> --}}
                         </li>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
@@ -111,9 +109,14 @@
                             <i class="fa fa-shopping-cart"></i>
                             <div class="cart-amount">0</div>
                         </a>
+
                         <a class="nav-link text-dark giohang text-uppercase" href="gio-hang.html"
                             style="display:inline-block">Giỏ
                             Hàng</a>
+
+                            @yield('logout')
+
+
                     </li>
                 </ul>
             </div>

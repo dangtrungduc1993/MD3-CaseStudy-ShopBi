@@ -37,21 +37,30 @@ Route::get('sachkinhte', function () {
     return view('front.layout.sachkinhte');
 });
 
+// Route::prefix('home')->group(function () {
+    Route::get('/product', [ProductController::class, 'index'])->name('product.list');
+    Route::get('/product/{id}/detail', [ProductController::class, 'show'])->name('product.detail');
 
+    // });
 
 Route::middleware('CheckAuth')->group(function(){
+    Route::get('homeauth',[ProductController::class,'auth'])->name('product.homeauth');
+    Route::prefix('products')->group(function () {
+        Route::get('/', [ProductController::class, 'indexAuth'])->name('product.listauth');
+        Route::get('create', [ProductController::class, 'create'])->name('product.showFormCreate');
+        Route::post('create', [ProductController::class, 'store'])->name('product.create');
+        Route::get('{id}/update', [ProductController::class, 'edit'])->name('product.showFormUpdate');
+        Route::post('{id}/update', [ProductController::class, 'update'])->name('product.update');
+        // Route::get('{id}/detail', [ProductController::class, 'show'])->name('product.detail');
+        Route::get('{id}/detailType', [ProductController::class, 'showByTypeId'])->name('product.detailType');
+        Route::get('{id}/delete', [ProductController::class, 'destroy'])->name('product.delete');
+});
+});
 
-});
-Route::prefix('products')->group(function () {
-    Route::get('/', [ProductController::class, 'index'])->name('product.list');
-    Route::get('create', [ProductController::class, 'create'])->name('product.showFormCreate');
-    Route::post('create', [ProductController::class, 'store'])->name('product.create');
-    Route::get('{id}/update', [ProductController::class, 'edit'])->name('product.showFormUpdate');
-    Route::post('{id}/update', [ProductController::class, 'update'])->name('product.update');
-    Route::get('{id}/detail', [ProductController::class, 'show'])->name('product.detail');
-    Route::get('{id}/detailType', [ProductController::class, 'showByTypeId'])->name('product.detailType');
-    Route::get('{id}/delete', [ProductController::class, 'destroy'])->name('product.delete');
-});
+
+
+
+
 
 
 Route::prefix('shops')->group(function () {
@@ -102,6 +111,7 @@ Route::get('register',function(){
 
 Route::get('login',[AuthController::class,'showFormLogin'])->name('auth.formLogin');
 Route::post('login',[AuthController::class,'login'])->name('auth.login');
+Route::get('logout',[AuthController::class,'logout'])->name('auth.logout');
 Route::get('register',[AuthController::class,'showFormRegister'])->name('auth.formRegister');
 Route::post('register',[AuthController::class,'register'])->name('auth.register')->middleware('CheckRegister');
 

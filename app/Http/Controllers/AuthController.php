@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\LoginRequest;
-use App\Http\Requests\RegisterRequest;
-use App\Services\UserService;
 use Illuminate\Http\Request;
+use App\Services\UserService;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\LoginRequest;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Requests\RegisterRequest;
 use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
@@ -29,7 +30,7 @@ class AuthController extends Controller
     public function login(LoginRequest $request)
     {
         if ($this->userService->login($request)) {
-            return redirect()->route('index');
+            return redirect()->route('product.homeauth');
         } else {
             Session::flash('msg', 'Tai khoan, mat khau khong dung');
             return redirect()->back();
@@ -39,5 +40,11 @@ class AuthController extends Controller
     {
         $this->userService->register($request);
         return redirect()->route('auth.login');
+    }
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('auth.login');
+
     }
 }

@@ -18,16 +18,9 @@
     </div>
     <div>
         SelectProductImage:
-        <input type="file" name="img"  >
+        <input type="file" name="img" value="{{$product->image}}" >
     </div>
-    <div>
-        SelectShopName:
-        <select name="shop_id" id="">
-            @foreach($products as $product)
-            <option value="{{$product->shopid}}">{{$product->shopname}}</option>
-            @endforeach
-        </select>
-    </div>
+
     <div>
         SelectTypeName:
         <select name="type_id" id="">

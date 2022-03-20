@@ -1,6 +1,7 @@
 @extends('front.layout.master')
-{{-- <a class="nav-link text-dark giohang text-uppercase" href="{{route('auth.logout')}}"
-                            style="display:inline-block">Log Out</a> --}}
+<a class="nav-link text-dark giohang text-uppercase" href="{{route('auth.logout')}}"
+                            style="display:inline-block">Log Out</a>
+
 @section('body')
 @section('title','Home')
 {{-- <td><a href="{{route('product.detailType',4)}}">DetailType</a></td> --}}
@@ -15,7 +16,7 @@
                     <!-- CATEGORIES -->
                     <div class="categorycontent">
                         <ul>
-                            <li> <a target="blank" href="{{route('product.list')}}"> Thời trang nam</a><i class="fa fa-chevron-right float-right"></i>
+                            <li> <a target="blank" href="{{route('product.listauth')}}"> Thời trang nam</a><i class="fa fa-chevron-right float-right"></i>
                                 <ul>
                                     <li class="liheader"><a href="#" class="header text-uppercase">Thời trang nam</a></li>
                                     <div class="content trai">
@@ -583,5 +584,12 @@
             <hr>
         </div>
     </section>
+
+
+
+
+
+
+
 
 @endsection

@@ -24,7 +24,7 @@ class ShopRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required',
+            // 'name'=>'required',
             'email'=>'required',
             'password'=>'required',
 

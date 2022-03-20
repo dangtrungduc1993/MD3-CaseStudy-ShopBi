@@ -22,8 +22,17 @@ class ProductController extends Controller
     public function index()
     {
         $products = $this->productRepository->getAll();
-     
+
        return view('backend.product.list',compact('products'));
+    }
+    public function auth()
+    {
+        return view('front.user');
+    }
+    public function indexAuth()
+    {
+        $products = $this->productRepository->getAll();
+        return view('backend.product.listAuth', compact('products'));
     }
 
 
@@ -44,7 +53,7 @@ class ProductController extends Controller
     {
         // dd($request);
          $this->productRepository->store($request);
-        return redirect()->route('product.list');
+        return redirect()->route('product.listauth');
 
     }
 
@@ -73,13 +82,13 @@ class ProductController extends Controller
     public function update(ProductRequest $request, $id)
     {
         $this->productRepository->update($request,$id);
-        return redirect()->route('product.list');
+        return redirect()->route('product.listauth');
     }
 
 
     public function destroy($id)
     {
         $this->productRepository->deleteById($id);
-        return redirect()->route('product.list');
+        return redirect()->route('product.listauth');
     }
 }

@@ -1,6 +1,7 @@
 @extends('front.layout.master')
-{{-- <a class="nav-link text-dark giohang text-uppercase" href="{{route('auth.logout')}}"
-                            style="display:inline-block">Log Out</a> --}}
+aaaaaaaaaaaaaaaaaaa
+
+
 @section('body')
 @section('title','Home')
 {{-- <td><a href="{{route('product.detailType',4)}}">DetailType</a></td> --}}
@@ -15,7 +16,7 @@
                     <!-- CATEGORIES -->
                     <div class="categorycontent">
                         <ul>
-                            <li> <a target="blank" href="{{route('product.list')}}"> Thời trang nam</a><i class="fa fa-chevron-right float-right"></i>
+                            <li> <a target="blank" href="{{route('product.listauth')}}"> Thời trang nam</a><i class="fa fa-chevron-right float-right"></i>
                                 <ul>
                                     <li class="liheader"><a href="#" class="header text-uppercase">Thời trang nam</a></li>
                                     <div class="content trai">
@@ -225,7 +226,8 @@
             <div class="noidung" style=" width: 100%;">
                 <div class="row">
                     <!--header-->
-
+                    <a class="nav-link text-dark giohang text-uppercase" href="{{route('auth.logout')}}"
+                            style="display:inline-block">Log Out</a>
                     <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-transparent pt-4">
                         <h2 class="header text-uppercase" style="font-weight: 400;">FLASH SALE</h2>
                         <a href="#" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
@@ -583,5 +585,12 @@
             <hr>
         </div>
     </section>
+
+
+
+
+
+
+
 
 @endsection
